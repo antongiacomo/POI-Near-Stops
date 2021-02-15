@@ -5,10 +5,23 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background-image: url("http://localhost:3000/back.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:cover;
+
+}
+
+.background-image{
+    background-image: url(http://localhost:3000/back.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(15px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -9999;
+    transform: scale(1.1);
+     filter: brightness(80%);
 }
 
 a {

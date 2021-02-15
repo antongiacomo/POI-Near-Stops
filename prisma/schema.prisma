@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Feb_2021_12_27_43_track_points {
+  id                 Int                      @id @default(autoincrement())
+  // This type is currently not supported by the Prisma Client.
+  // geom            Unsupported("geometry")?
+  track_fid          Int?
+  track_seg_id       Int?
+  track_seg_point_id Int?
+  ele                Float?
+  time               DateTime?
+  magvar             Float?
+  geoidheight        Float?
+  name               String?
+  cmt                String?
+  desc               String?
+  src                String?
+  link1_href         String?
+  link1_text         String?
+  link1_type         String?
+  link2_href         String?
+  link2_text         String?
+  link2_type         String?
+  sym                String?
+  type               String?
+  fix                String?
+  sat                Int?
+  hdop               Float?
+  vdop               Float?
+  pdop               Float?
+  ageofdgpsdata      Float?
+  dgpsid             Int?
+  geotracker_meta    Int?
+
+  @@map("11_Feb_2021_12_27_43 track_points")
+}
+
+model geo {
+  id      Int                      @id @default(autoincrement())
+  // This type is currently not supported by the Prisma Client.
+  // geom Unsupported("geometry")?
+  field_1 Float?
+  field_2 Float?
+  field_3 Int?
+  field_4 Int?
+  field_5 Float?
+  field_6 DateTime?
+  field_7 DateTime?
+}
+
+// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+// model oneline {
+  // This type is currently not supported by the Prisma Client.
+  // st_makeline Unsupported("geometry")?
+// }
+
+model spatial_ref_sys {
+  srid      Int     @id
+  auth_name String?
+  auth_srid Int?
+  srtext    String?
+  proj4text String?
+}
+
+// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+// model t {
+  // id   Int?
+  // y    Float?
+  // x    Float?
+  // time DateTime?
+  // This type is currently not supported by the Prisma Client.
+  // geom Unsupported("geometry")?
+// }
+
+// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+// model tn {
+  // This type is currently not supported by the Prisma Client.
+  // traj Unsupported("geometry")?
+// }
+
+// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+// model traj_info {
+  // begin    DateTime?
+  // end      DateTime?
+  // This type is currently not supported by the Prisma Client.
+  // duration Unsupported("interval")?
+  // length   Float?
+// }
+
+model stops{
+  st_asgeojson String
+  sequence Int @id
+}
+model stops2{
+  st_asgeojson String
+  sequence Int @id
+}

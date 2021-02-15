@@ -8,11 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prisma/client": "^2.16.1",
     "autoprefixer": "^10.2.4",
+    "leaflet": "^1.7.1",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
+    "leaflet-geosearch": "^3.2.1",
     "next": "10.0.6",
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-leaflet": "^3.1.0",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.16.1",
+    "prisma": "^2.16.1"
   }
 }
